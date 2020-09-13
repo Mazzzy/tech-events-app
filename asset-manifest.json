@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/tech-events-app/static/css/main.050523cc.chunk.css",
+    "main.js": "/tech-events-app/static/js/main.af09afe4.chunk.js",
+    "main.js.map": "/tech-events-app/static/js/main.af09afe4.chunk.js.map",
+    "runtime-main.js": "/tech-events-app/static/js/runtime-main.55023b5b.js",
+    "runtime-main.js.map": "/tech-events-app/static/js/runtime-main.55023b5b.js.map",
+    "static/css/2.4555ca6d.chunk.css": "/tech-events-app/static/css/2.4555ca6d.chunk.css",
+    "static/js/2.16d5195c.chunk.js": "/tech-events-app/static/js/2.16d5195c.chunk.js",
+    "static/js/2.16d5195c.chunk.js.map": "/tech-events-app/static/js/2.16d5195c.chunk.js.map",
+    "index.html": "/tech-events-app/index.html",
+    "precache-manifest.cd868f4c6d338a55197fa7316e42588e.js": "/tech-events-app/precache-manifest.cd868f4c6d338a55197fa7316e42588e.js",
+    "service-worker.js": "/tech-events-app/service-worker.js",
+    "static/css/2.4555ca6d.chunk.css.map": "/tech-events-app/static/css/2.4555ca6d.chunk.css.map",
+    "static/css/main.050523cc.chunk.css.map": "/tech-events-app/static/css/main.050523cc.chunk.css.map",
+    "static/js/2.16d5195c.chunk.js.LICENSE.txt": "/tech-events-app/static/js/2.16d5195c.chunk.js.LICENSE.txt",
+    "static/media/all.min.css": "/tech-events-app/static/media/fa-solid-900.ee09ad75.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.55023b5b.js",
+    "static/css/2.4555ca6d.chunk.css",
+    "static/js/2.16d5195c.chunk.js",
+    "static/css/main.050523cc.chunk.css",
+    "static/js/main.af09afe4.chunk.js"
+  ]
+}
