@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import Workspace from "./components/templates/Workspace";
 
 function App() {
     return (
-        <div className="App">
-            <h2>Welcome to Tech events</h2>
+        <div className="container">
+            <Workspace />
         </div>
     );
 }

@@ -1,3 +1,3 @@
-export const GET_EVENTS = 'GET_EVENTS';
-export const SET_LOADING = 'SET_LOADING';
-export const SET_ERROR = 'SET_ERROR';
+export const GET_EVENTS = "GET_EVENTS";
+export const SET_LOADING = "SET_LOADING";
+export const SET_ERROR = "SET_ERROR";
