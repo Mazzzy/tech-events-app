@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-import App from "./containers/dashboard";
 import { Provider } from "react-redux";
+
+import "../node_modules/bulma/css/bulma.min.css";
+import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
 import { store } from "./store/store";
+import App from "./containers/Dashboard";
 
 ReactDOM.render(
     <React.StrictMode>

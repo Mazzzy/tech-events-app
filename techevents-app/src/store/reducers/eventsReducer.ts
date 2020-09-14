@@ -5,4 +5,4 @@ export const eventsReducer = (state: any = initialState, action: any) => {
         default:
             return state;
     }
-}
+};
