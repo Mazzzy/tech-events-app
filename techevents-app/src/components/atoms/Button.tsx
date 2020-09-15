@@ -5,9 +5,7 @@ interface ButtonProps {
 }
 
 const Button: FC<ButtonProps> = ({ title }) => {
-    return (
-        <a className="button is-small is-primary is-outlined">{ title || ""}</a>
-    );
+    return <a className="button is-small is-primary is-outlined">{title || ""}</a>;
 };
 
 export default Button;

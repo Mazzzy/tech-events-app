@@ -6,9 +6,7 @@ interface LogoProps {
 }
 
 const Logo: FC<LogoProps> = ({ url }) => {
-    return (
-        <img src={url || defaultLogo} />
-    );
+    return <img src={url || defaultLogo} />;
 };
 
 export default Logo;

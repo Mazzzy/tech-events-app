@@ -5,9 +5,7 @@ interface BadgeProps {
 }
 
 const Badge: FC<BadgeProps> = ({ title }) => {
-    return (
-        <span className="tag is-success">{title || ""}</span>
-    );
+    return <span className="tag is-success">{title || ""}</span>;
 };
 
 export default Badge;
