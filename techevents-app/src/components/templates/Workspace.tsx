@@ -3,15 +3,10 @@ import Navbar from "../organisms/Navbar";
 import Sidebar from "../organisms/Sidebar";
 import MainContent from "../organisms/MainContent";
 
-interface WorkspaceProps {
-    title?: string;
-    subtitle?: string;
-}
-
-const Workspace: FC<WorkspaceProps> = ({ title, subtitle }) => {
+const Workspace: FC = () => {
     return (
         <div>
-            <Navbar title="Hello" />
+            <Navbar title="Tech events app" />
             <div className="columns px-5 mt-5">
                 <Sidebar />
                 <MainContent />
