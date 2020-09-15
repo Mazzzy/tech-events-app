@@ -1,0 +1,1 @@
+{"version":3,"sources":["EventItem.css","App.css"],"names":[],"mappings":"AAAA,UACI,YAAa,CACb,6BACJ,CCHA,WACE,kBACF","file":"main.5b0bdb2d.chunk.css","sourcesContent":[".box-item {\n    display: flex;\n    justify-content: space-between;\n}",".container {\n  background: #EDF2F7;\n}\n"]}

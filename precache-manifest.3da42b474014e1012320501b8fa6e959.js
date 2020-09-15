@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4668ea133fc3f1d62a0796c5342a025e",
+    "revision": "0bfc7fd1c612288054ba29df903b442a",
     "url": "/tech-events-app/index.html"
   },
   {
-    "revision": "b2289ef13ec5200de267",
+    "revision": "12246446e176fbb9b34c",
     "url": "/tech-events-app/static/css/2.4555ca6d.chunk.css"
   },
   {
-    "revision": "57ec8485144a3803967d",
-    "url": "/tech-events-app/static/css/main.050523cc.chunk.css"
+    "revision": "5722d9d0b688a23a85b0",
+    "url": "/tech-events-app/static/css/main.5b0bdb2d.chunk.css"
   },
   {
-    "revision": "b2289ef13ec5200de267",
-    "url": "/tech-events-app/static/js/2.16d5195c.chunk.js"
+    "revision": "12246446e176fbb9b34c",
+    "url": "/tech-events-app/static/js/2.81137428.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/tech-events-app/static/js/2.16d5195c.chunk.js.LICENSE.txt"
+    "url": "/tech-events-app/static/js/2.81137428.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "57ec8485144a3803967d",
-    "url": "/tech-events-app/static/js/main.af09afe4.chunk.js"
+    "revision": "5722d9d0b688a23a85b0",
+    "url": "/tech-events-app/static/js/main.7dcf0152.chunk.js"
   },
   {
     "revision": "7885885180d8d3b23723",
