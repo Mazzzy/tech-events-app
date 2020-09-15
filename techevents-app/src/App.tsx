@@ -4,7 +4,7 @@ import Workspace from "./components/templates/Workspace";
 
 function App() {
     return (
-        <div className="container">
+        <div className="container is-size-7">
             <Workspace />
         </div>
     );

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { TechEvent } from "../../../store/types"; 
+import { TechEvent } from "../../../store/types";
 import { hoursFormat } from "../../../utils/utils";
 import Badge from "../../atoms/Badge";
 import Button from "../../atoms/Button";
@@ -7,7 +7,7 @@ import Button from "../../atoms/Button";
 import "./EventItem.css";
 
 interface EventItemProps {
-    item: TechEvent
+    item: TechEvent;
 }
 
 const EventItem: FC<EventItemProps> = ({ item }) => {
@@ -16,21 +16,30 @@ const EventItem: FC<EventItemProps> = ({ item }) => {
         <div className="box">
             <div className="box-item">
                 <p>
-                    { item.isFree ? <Badge title="Free"/> : "" }
-                    <span className="px-4">{ item?.name } </span>
+                    {item.isFree ? <Badge title="Free" /> : ""}
+                    <span className="px-4 is-size-6">{item?.name} </span>
                 </p>
                 <Button title="Sign up" />
             </div>
             <div className="box-item mt-4">
                 <p>
-                    <span>{ item?.city }</span>
+                    <span className="icon">
+                        <i className="fas fa-map-marker"></i>
+                    </span>
+                    <span>{item?.city}</span>
                 </p>
                 <p>
+                    <span className="icon">
+                        <i className="fas fa-thermometer-half"></i>
+                    </span>
                     Temp
                 </p>
                 <p>
-                  <span>from: { startDate ? hoursFormat(new Date(startDate)) : '' } </span>
-                  <span>to: { endDate ? hoursFormat(new Date(endDate)) : '' }</span>
+                    <span className="icon">
+                        <i className="fa fa-clock" aria-hidden="true"></i>
+                    </span>
+                    <span>from: {startDate ? hoursFormat(new Date(startDate)) : ""} </span>
+                    <span>to: {endDate ? hoursFormat(new Date(endDate)) : ""}</span>
                 </p>
             </div>
         </div>
