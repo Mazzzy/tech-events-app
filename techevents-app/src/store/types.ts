@@ -15,8 +15,33 @@ export interface CityDetails {
     name: string;
 }
 export interface TechEventsData {
-    data: {
-        events: TechEvent[],
-        cities: CityDetails[]
-    }
+    events: TechEvent[];
+    cities: CityDetails[];
 }
+
+export interface APIError {
+    code: string;
+    message: string;
+}
+
+export interface TechEventState {
+    data: TechEventsData | null;
+    loading: boolean;
+    error: string;
+}
+
+interface GetTechEventAction {
+    type: typeof GET_EVENTS;
+    payload: TechEventsData;
+}
+
+interface SetLoadingAction {
+    type: typeof SET_LOADING;
+}
+
+interface SetErrorAction {
+    type: typeof SET_ERROR;
+    payload: string;
+}
+
+export type TechEventAction = GetTechEventAction | SetLoadingAction | SetErrorAction;

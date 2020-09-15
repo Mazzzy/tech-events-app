@@ -24,7 +24,7 @@ const Filters: FC = () => {
             <div className="card-header">
                 <p className="card-header-title">
                     <span className="icon">
-                        <i className="fas fa-filter"></i>
+                        <i className="fas fa-filter" />
                     </span>
                     Filter by
                 </p>

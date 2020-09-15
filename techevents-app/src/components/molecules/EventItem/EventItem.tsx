@@ -24,19 +24,19 @@ const EventItem: FC<EventItemProps> = ({ item }) => {
             <div className="box-item mt-4">
                 <p>
                     <span className="icon">
-                        <i className="fas fa-map-marker"></i>
+                        <i className="fas fa-map-marker" />
                     </span>
                     <span>{item?.city}</span>
                 </p>
                 <p>
                     <span className="icon">
-                        <i className="fas fa-thermometer-half"></i>
+                        <i className="fas fa-thermometer-half" />
                     </span>
                     Temp
                 </p>
                 <p>
                     <span className="icon">
-                        <i className="fa fa-clock" aria-hidden="true"></i>
+                        <i className="fa fa-clock" aria-hidden="true" />
                     </span>
                     <span>from: {startDate ? hoursFormat(new Date(startDate)) : ""} </span>
                     <span>to: {endDate ? hoursFormat(new Date(endDate)) : ""}</span>
@@ -47,24 +47,3 @@ const EventItem: FC<EventItemProps> = ({ item }) => {
 };
 
 export default EventItem;
-
-/**
- * 
- * <tr key={task.id} className={task.completed ? 'completed' : ''}>
-              <td>{task.name}</td>
-              <td className="has-text-centered">
-                <button className="button is-primary is-small" onClick={() => setTaskToEditHandler(task)}>
-                  <span className="icon">
-                    <i className="fas fa-edit"></i>
-                  </span>
-                </button>
-              </td>
-              <td className="has-text-centered">
-                <button className="button is-danger is-small" onClick={() => setTaskToDeleteHandler(task)}>
-                  <span className="icon">
-                    <i className="fas fa-times"></i>
-                  </span>
-                </button>
-              </td>
-            </tr>
- */

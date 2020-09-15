@@ -1,13 +1,23 @@
-import React from "react";
-import "./App.css";
+import React, { FC, useEffect } from "react";
+import { useDispatch } from "react-redux";
+
+import { getTechEvents, setLoading } from "./store/actions/eventsAction";
 import Workspace from "./components/templates/Workspace";
 
-function App() {
+import "./App.css";
+
+const App: FC = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(setLoading());
+        dispatch(getTechEvents());
+    }, []);
+
     return (
         <div className="container is-size-7">
             <Workspace />
         </div>
     );
-}
+};
 
 export default App;
