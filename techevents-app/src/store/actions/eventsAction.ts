@@ -10,7 +10,7 @@ export const getTechEvents = (): ThunkAction<void, RootState, null, TechEventAct
 
             if (!res.ok) {
                 const resData: APIError = await res.json();
-                throw new Error(resData.message);
+                throw new Error(resData.data);
             }
 
             const resData: TechEventsData = await res.json();

@@ -1,12 +1,24 @@
 import React, { FC, useState, FormEvent } from "react";
+import { useDispatch } from "react-redux";
+
+import { filterText, filterFree } from "../../store/actions/filtersAction";
+import Badge from "../atoms/Badge";
 
 const Filters: FC = () => {
+    const dispatch = useDispatch();
+
     const [eventName, setEventName] = useState("");
     const [cityName, setCityName] = useState("");
-    const [onlyState, setOnlyState] = useState(false);
+    const [onlyFreeEvent, setOnlyFreeEvent] = useState(false);
 
-    const inputChangeHandler = (e: FormEvent<HTMLInputElement>) => {
-        setEventName(e.currentTarget.value);
+    const nameInputChangeHandler = (e: FormEvent<HTMLInputElement>) => {
+        const nameText = e.currentTarget.value;
+        setEventName(nameText);
+        dispatch(filterText(nameText));
+    };
+
+    const cityInputChangeHandler = (e: FormEvent<HTMLInputElement>) => {
+        setCityName(e.currentTarget.value);
     };
 
     const submitHandler = (e: FormEvent<HTMLFormElement>) => {
@@ -15,8 +27,10 @@ const Filters: FC = () => {
         setCityName("");
     };
 
-    const stateChangeHandler = (e: FormEvent<HTMLInputElement>) => {
-        setOnlyState(e.currentTarget.checked);
+    const onlyFreeChangeHandler = (e: FormEvent<HTMLInputElement>) => {
+        const checkStatus = e.currentTarget.checked;
+        setOnlyFreeEvent(checkStatus);
+        dispatch(filterFree(checkStatus));
     };
 
     return (
@@ -39,7 +53,7 @@ const Filters: FC = () => {
                                 placeholder="Event Name"
                                 name="eventName"
                                 value={eventName}
-                                onChange={inputChangeHandler}
+                                onChange={nameInputChangeHandler}
                             />
                         </div>
                     </div>
@@ -51,33 +65,34 @@ const Filters: FC = () => {
                                 placeholder="Event City"
                                 name="cityName"
                                 value={cityName}
-                                onChange={inputChangeHandler}
+                                onChange={cityInputChangeHandler}
                             />
                         </div>
                     </div>
                     <div className="field">
                         <label className="checkbox">
-                            <input type="checkbox" checked={onlyState} onChange={stateChangeHandler} /> Only
+                            <input type="checkbox" checked={onlyFreeEvent} onChange={onlyFreeChangeHandler} /> Only{" "}
+                            <Badge title="Free" />
                         </label>
                     </div>
                     <div className="field">
                         <label className="checkbox">
-                            <input type="checkbox" checked={onlyState} onChange={stateChangeHandler} /> Morning
+                            <input type="checkbox" /> Morning
                         </label>
                     </div>
                     <div className="field">
                         <label className="checkbox">
-                            <input type="checkbox" checked={onlyState} onChange={stateChangeHandler} /> Afternoon
+                            <input type="checkbox" /> Afternoon
                         </label>
                     </div>
                     <div className="field">
                         <label className="checkbox">
-                            <input type="checkbox" checked={onlyState} onChange={stateChangeHandler} /> Evening
+                            <input type="checkbox" /> Evening
                         </label>
                     </div>
                     <div className="field">
                         <label className="checkbox">
-                            <input type="checkbox" checked={onlyState} onChange={stateChangeHandler} /> Night
+                            <input type="checkbox" /> Night
                         </label>
                     </div>
                 </form>

@@ -1,12 +1,12 @@
 import { TechEventState, GET_EVENTS, SET_LOADING, TechEventAction, SET_ERROR } from "../types";
 
-const initialState: TechEventState = {
+const initialEventsState: TechEventState = {
     data: null,
     loading: false,
     error: "",
 };
 
-export const eventsReducer = (state = initialState, action: TechEventAction): TechEventState => {
+export const eventsReducer = (state = initialEventsState, action: TechEventAction): TechEventState => {
     switch (action.type) {
         case GET_EVENTS:
             return {

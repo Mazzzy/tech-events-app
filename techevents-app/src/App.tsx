@@ -8,10 +8,8 @@ import "./App.css";
 
 const App: FC = () => {
     const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(setLoading());
-        dispatch(getTechEvents());
-    }, []);
+    dispatch(setLoading());
+    dispatch(getTechEvents());
 
     return (
         <div className="container is-size-7">
