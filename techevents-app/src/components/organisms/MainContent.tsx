@@ -8,15 +8,16 @@ const MainContent: FC = () => {
     const loading = useSelector((state: RootState) => state.techEvents.loading);
     const techEventsData = useSelector((state: RootState) => state.techEvents.data);
     const error = useSelector((state: RootState) => state.techEvents.error);
+    const filterData = useSelector((state: RootState) => state.filters);
 
     return (
         <div className="column is-9">
             {loading ? (
-                <h2 className="is-size-3 py-2">Loading events...</h2>
+                <h3 className="is-size-4 py-2">Loading events...</h3>
             ) : (
-                techEventsData && <EventList data={techEventsData} />
+                techEventsData && <EventList data={techEventsData} filters={filterData} />
             )}
-            {error && <p>{error}</p>}
+            {error && <h3 className="is-size-4 py-2">{error}</h3>}
         </div>
     );
 };

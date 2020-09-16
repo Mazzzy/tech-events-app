@@ -1,13 +1,18 @@
 import React, { FC } from "react";
-import { TechEvent, TechEventsData } from "../../store/types";
+import { TechEvent, TechEventsData, FilterState } from "../../store/types";
+import { getVisibleEvents } from "../../utils/utils";
+
 import EventItem from "./EventItem/EventItem";
 interface EventListProps {
     data: TechEventsData;
+    filters: FilterState;
 }
 
-const EventList: FC<EventListProps> = ({ data }) => {
+const EventList: FC<EventListProps> = ({ data, filters }) => {
     const { events, cities } = data;
-    const eventsCollection = events.map((aTechEvent: TechEvent) => (
+    const { text, free } = filters;
+    const visibleEvents = getVisibleEvents(events, text, free);
+    const eventsCollection = visibleEvents.map((aTechEvent: TechEvent) => (
         <EventItem key={aTechEvent?.id} item={aTechEvent} />
     ));
 
