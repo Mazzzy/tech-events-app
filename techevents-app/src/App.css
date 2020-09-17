@@ -1,3 +1,7 @@
 .container {
   background: #EDF2F7;
 }
+.arrange-flex-lr {
+  display: flex;
+  justify-content: space-between;
+}
