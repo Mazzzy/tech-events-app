@@ -1,9 +1,18 @@
-import { FilterState, FILTER_TEXT, FILTER_FREE, FILTER_PARTS_OF_DAY, FILTER_CLEAR, FilterAction } from "../types";
+import {
+    FilterState,
+    FILTER_TEXT,
+    FILTER_CITY,
+    FILTER_FREE,
+    FILTER_PARTS_OF_DAY,
+    FILTER_CLEAR,
+    FilterAction,
+} from "../types";
 
 const initialFilterState: FilterState = {
     text: "",
+    city: 0,
     free: false,
-    dayPart: "",
+    dayPart: [],
 };
 
 export const filtersReducer = (state = initialFilterState, action: FilterAction): FilterState => {
@@ -12,6 +21,11 @@ export const filtersReducer = (state = initialFilterState, action: FilterAction)
             return {
                 ...state,
                 text: action.text,
+            };
+        case FILTER_CITY:
+            return {
+                ...state,
+                city: action.city,
             };
         case FILTER_FREE:
             return {

@@ -11,7 +11,7 @@ interface EventItemProps {
     cityName: string;
 }
 
-const EventItem: FC<EventItemProps> = ({ item,  cityName}) => {
+const EventItem: FC<EventItemProps> = ({ item, cityName }) => {
     const { startDate, endDate } = item;
     return (
         <div className="box">
