@@ -12,12 +12,8 @@ const EventList: FC<EventListProps> = ({ data, filters }) => {
     const { events, cities } = data;
     const visibleEvents = getVisibleEvents(events, filters);
     const eventsCollection = visibleEvents.map((aTechEvent: TechEvent, index: number) => [
-        <DateGroup
-            key={`${aTechEvent.startDate}-date`}
-            event={aTechEvent}
-            prevEvent={(visibleEvents[index - 1])}
-        />,
-        <EventItem key={aTechEvent?.id} item={aTechEvent} cityName={getCityLabel(cities, aTechEvent.city)}/>
+        <DateGroup key={`${aTechEvent.startDate}-date`} event={aTechEvent} prevEvent={visibleEvents[index - 1]} />,
+        <EventItem key={aTechEvent?.id} item={aTechEvent} cityName={getCityLabel(cities, aTechEvent.city)} />,
     ]);
 
     return (

@@ -5,9 +5,9 @@ import { RootState } from "../../store/store";
 import EventList from "../molecules/EventList";
 
 const MainContent: FC = () => {
-    const loading = useSelector((state: RootState) => state.techEvents.loading);
-    const techEventsData = useSelector((state: RootState) => state.techEvents.data);
-    const error = useSelector((state: RootState) => state.techEvents.error);
+    const loading = useSelector((state: RootState) => state.techEvents?.loading);
+    const techEventsData = useSelector((state: RootState) => state.techEvents?.data);
+    const error = useSelector((state: RootState) => state.techEvents?.error);
     const filterData = useSelector((state: RootState) => state.filters);
 
     return (
