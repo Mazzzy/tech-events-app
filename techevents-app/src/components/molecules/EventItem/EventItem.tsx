@@ -8,16 +8,17 @@ import "./EventItem.css";
 
 interface EventItemProps {
     item: TechEvent;
+    cityName: string;
 }
 
-const EventItem: FC<EventItemProps> = ({ item }) => {
+const EventItem: FC<EventItemProps> = ({ item,  cityName}) => {
     const { startDate, endDate } = item;
     return (
         <div className="box">
             <div className="box-item">
                 <p>
                     {item.isFree ? <Badge title="Free" /> : ""}
-                    <span className="px-4 is-size-6">{item?.name} </span>
+                    <span className="px-4 is-size-6 has-text-weight-bold">{item?.name} </span>
                 </p>
                 <Button title="Sign up" />
             </div>
@@ -26,7 +27,7 @@ const EventItem: FC<EventItemProps> = ({ item }) => {
                     <span className="icon">
                         <i className="fas fa-map-marker" />
                     </span>
-                    <span>{item?.city}</span>
+                    <span>{cityName}</span>
                 </p>
                 <p>
                     <span className="icon">
