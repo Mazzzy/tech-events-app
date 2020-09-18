@@ -1,6 +1,19 @@
 import { TechEvent, FilterState, CityDetails } from "../store/types";
 import moment from "moment";
 
+// local storage related
+export const getEventsFromLS = (): TechEvent | any => {
+    if (localStorage.getItem("selected_events")) {
+        return JSON.parse(localStorage.getItem("selected_events") || "{}");
+    }
+    return {};
+};
+
+export const saveEventsToLS = (eventsList: TechEvent) => {
+    localStorage.setItem("selected_events", JSON.stringify(eventsList));
+};
+
+// date time related helpers
 export const hoursFormat = (date: Date): string => {
     let hours: any = date.getHours();
     let minutes: any = date.getMinutes();
@@ -34,6 +47,7 @@ const getTime = (currentTime: any): string => {
     return "night";
 };
 
+// filter out matched criterias
 export const getVisibleEvents = (techEvents: TechEvent[], filters: FilterState) => {
     const { text, city, free, dayPart } = filters;
     return techEvents

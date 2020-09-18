@@ -6,7 +6,7 @@ export const FILTER_CITY = "FILTER_CITY";
 export const FILTER_FREE = "FILTER_FREE";
 export const FILTER_PARTS_OF_DAY = "FILTER_PARTS_OF_DAY";
 export const FILTER_CLEAR = "FILTER_CLEAR";
-
+export const SET_SELECTED_EVENT = "SET_SELECTED_EVENT";
 // events specific
 export interface TechEvent {
     id: number;
@@ -32,6 +32,7 @@ export interface TechEventState {
     data: TechEventsData | null;
     loading: boolean;
     error: string;
+    selectedEvent: TechEvent | null;
 }
 
 // error handling during API call
@@ -53,7 +54,12 @@ interface SetErrorAction {
     payload: string;
 }
 
-export type TechEventAction = GetTechEventAction | SetLoadingAction | SetErrorAction;
+interface SetSelectedEventAction {
+    type: typeof SET_SELECTED_EVENT;
+    payload: string;
+}
+
+export type TechEventAction = GetTechEventAction | SetLoadingAction | SetErrorAction | SetSelectedEventAction;
 
 // filter specific
 export interface FilterState {

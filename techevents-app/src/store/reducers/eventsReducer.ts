@@ -1,18 +1,22 @@
-import { TechEventState, GET_EVENTS, SET_LOADING, TechEventAction, SET_ERROR } from "../types";
+import { TechEventState, GET_EVENTS, SET_LOADING, TechEventAction, SET_ERROR, SET_SELECTED_EVENT } from "../types";
+import { getEventsFromLS, saveEventsToLS } from "../../utils/utils";
 
 const initialEventsState: TechEventState = {
     data: null,
     loading: false,
     error: "",
+    selectedEvent: null,
 };
 
 export const eventsReducer = (state = initialEventsState, action: TechEventAction): TechEventState => {
+    const eventsFromLS = getEventsFromLS();
     switch (action.type) {
         case GET_EVENTS:
             return {
                 data: action.payload,
                 loading: false,
                 error: "",
+                selectedEvent: null,
             };
         case SET_LOADING:
             return {
@@ -24,6 +28,14 @@ export const eventsReducer = (state = initialEventsState, action: TechEventActio
                 ...state,
                 error: action.payload,
                 loading: false,
+            };
+        case SET_SELECTED_EVENT:
+            const clonedEventsFromLS = { ...eventsFromLS };
+            clonedEventsFromLS[action.payload] = action.payload;
+            saveEventsToLS(clonedEventsFromLS);
+            return {
+                ...state,
+                selectedEvent: clonedEventsFromLS,
             };
         default:
             return state;

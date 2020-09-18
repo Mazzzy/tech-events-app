@@ -1,5 +1,13 @@
 import { ThunkAction } from "redux-thunk";
-import { GET_EVENTS, TechEventAction, SET_LOADING, SET_ERROR, TechEventsData, APIError } from "../types";
+import {
+    GET_EVENTS,
+    TechEventAction,
+    SET_LOADING,
+    SET_ERROR,
+    TechEventsData,
+    APIError,
+    SET_SELECTED_EVENT,
+} from "../types";
 import { RootState } from "../store";
 import API from "../../config/API";
 
@@ -37,5 +45,12 @@ export const setError = (): TechEventAction => {
     return {
         type: SET_ERROR,
         payload: "",
+    };
+};
+
+export const setSelectedEvent = (id: string): TechEventAction => {
+    return {
+        type: SET_SELECTED_EVENT,
+        payload: id,
     };
 };
