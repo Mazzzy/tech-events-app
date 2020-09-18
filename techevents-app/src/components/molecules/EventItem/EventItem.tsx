@@ -1,9 +1,6 @@
 import React, { FC, FormEvent } from "react";
-import { useDispatch } from "react-redux";
-
 import { TechEvent } from "../../../store/types";
 import { hoursFormat } from "../../../utils/utils";
-import { setSelectedEvent } from "../../../store/actions/eventsAction";
 
 import Badge from "../../atoms/Badge";
 import Button from "../../atoms/Button";
@@ -13,13 +10,10 @@ import "./EventItem.css";
 interface EventItemProps {
     item: TechEvent;
     cityName: string;
+    handleSignUpClickHandler: (e: FormEvent<HTMLAnchorElement>, id: number) => void;
 }
 
-const EventItem: FC<EventItemProps> = ({ item, cityName }) => {
-    const dispatch = useDispatch();
-    const signUpClickHandler = (e: FormEvent<HTMLAnchorElement>) => {
-        dispatch(setSelectedEvent(e.currentTarget?.id));
-    };
+const EventItem: FC<EventItemProps> = ({ item, cityName, handleSignUpClickHandler }) => {
     const { startDate, endDate, id } = item;
     return (
         <div className="box">
@@ -28,7 +22,10 @@ const EventItem: FC<EventItemProps> = ({ item, cityName }) => {
                     {item.isFree ? <Badge title="Free" /> : ""}
                     <span className="px-4 is-size-6 has-text-weight-bold">{item?.name} </span>
                 </p>
-                <Button title="Sign up" onClick={signUpClickHandler} dataVal={String(id)} />
+                <Button
+                    title="Sign up"
+                    onClick={(e: FormEvent<HTMLAnchorElement>) => handleSignUpClickHandler(e, id)}
+                />
             </div>
             <div className="box-item mt-4">
                 <p>

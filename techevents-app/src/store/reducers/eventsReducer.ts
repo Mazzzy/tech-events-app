@@ -30,12 +30,12 @@ export const eventsReducer = (state = initialEventsState, action: TechEventActio
                 loading: false,
             };
         case SET_SELECTED_EVENT:
-            const clonedEventsFromLS = { ...eventsFromLS };
-            clonedEventsFromLS[action.payload] = action.payload;
-            saveEventsToLS(clonedEventsFromLS);
+            const clonedSelectedEventsFromLS = { ...eventsFromLS };
+            clonedSelectedEventsFromLS[action.payload] = action.payload;
+            saveEventsToLS(clonedSelectedEventsFromLS);
             return {
                 ...state,
-                selectedEvent: clonedEventsFromLS,
+                selectedEvent: clonedSelectedEventsFromLS,
             };
         default:
             return state;
