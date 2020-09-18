@@ -1,15 +1,26 @@
-import React, { FC } from "react";
+import React, { FC, MouseEvent } from "react";
 
 interface NavMenuProps {
-    title?: string;
+    activeTab?: string;
+    setActiveTabClick: (e: MouseEvent<HTMLAnchorElement>, name: string) => void;
 }
 
-const NavMenu: FC<NavMenuProps> = ({ title }) => {
+const NavMenu: FC<NavMenuProps> = ({ activeTab, setActiveTabClick }) => {
     return (
         <div className="navbar-menu">
             <div className="navbar-end">
-                <a className="navbar-item">All events</a>
-                <a className="navbar-item">My events</a>
+                <a
+                    className={`navbar-item ${activeTab === "all" ? "is-active is-tab" : ""}`}
+                    onClick={(e: MouseEvent<HTMLAnchorElement>) => setActiveTabClick(e, "all")}
+                >
+                    All events
+                </a>
+                <a
+                    className={`navbar-item ${activeTab === "my" ? "is-active is-tab" : ""}`}
+                    onClick={(e: MouseEvent<HTMLAnchorElement>) => setActiveTabClick(e, "my")}
+                >
+                    My events
+                </a>
                 <a className="navbar-item">About</a>
             </div>
         </div>

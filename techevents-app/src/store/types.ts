@@ -7,6 +7,8 @@ export const FILTER_FREE = "FILTER_FREE";
 export const FILTER_PARTS_OF_DAY = "FILTER_PARTS_OF_DAY";
 export const FILTER_CLEAR = "FILTER_CLEAR";
 export const SET_SELECTED_EVENT = "SET_SELECTED_EVENT";
+export const SET_TAB_ACTIVE = "SET_TAB_ACTIVE";
+
 // events specific
 export interface TechEvent {
     id: number;
@@ -95,3 +97,14 @@ export type FilterAction =
     | FilterFreeAction
     | FilterPartsOfDayAction
     | FilterClearAction;
+
+// tabs specific
+export interface TabsState {
+    activeName: string;
+}
+interface TabActiveAction {
+    type: typeof SET_TAB_ACTIVE;
+    activeName: string;
+}
+
+export type TabsAction = TabActiveAction;
