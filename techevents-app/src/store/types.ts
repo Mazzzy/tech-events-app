@@ -6,6 +6,8 @@ export const FILTER_CITY = "FILTER_CITY";
 export const FILTER_FREE = "FILTER_FREE";
 export const FILTER_PARTS_OF_DAY = "FILTER_PARTS_OF_DAY";
 export const FILTER_CLEAR = "FILTER_CLEAR";
+export const SET_SELECTED_EVENT = "SET_SELECTED_EVENT";
+export const SET_TAB_ACTIVE = "SET_TAB_ACTIVE";
 
 // events specific
 export interface TechEvent {
@@ -32,6 +34,7 @@ export interface TechEventState {
     data: TechEventsData | null;
     loading: boolean;
     error: string;
+    selectedEvent: TechEvent | null;
 }
 
 // error handling during API call
@@ -53,7 +56,12 @@ interface SetErrorAction {
     payload: string;
 }
 
-export type TechEventAction = GetTechEventAction | SetLoadingAction | SetErrorAction;
+interface SetSelectedEventAction {
+    type: typeof SET_SELECTED_EVENT;
+    payload: string;
+}
+
+export type TechEventAction = GetTechEventAction | SetLoadingAction | SetErrorAction | SetSelectedEventAction;
 
 // filter specific
 export interface FilterState {
@@ -89,3 +97,14 @@ export type FilterAction =
     | FilterFreeAction
     | FilterPartsOfDayAction
     | FilterClearAction;
+
+// tabs specific
+export interface TabsState {
+    activeName: string;
+}
+interface TabActiveAction {
+    type: typeof SET_TAB_ACTIVE;
+    activeName: string;
+}
+
+export type TabsAction = TabActiveAction;

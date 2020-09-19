@@ -1,6 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, FormEvent } from "react";
 import { TechEvent } from "../../../store/types";
 import { hoursFormat } from "../../../utils/utils";
+
 import Badge from "../../atoms/Badge";
 import Button from "../../atoms/Button";
 
@@ -9,10 +10,11 @@ import "./EventItem.css";
 interface EventItemProps {
     item: TechEvent;
     cityName: string;
+    handleSignUpClickHandler: (e: FormEvent<HTMLAnchorElement>, id: number) => void;
 }
 
-const EventItem: FC<EventItemProps> = ({ item, cityName }) => {
-    const { startDate, endDate } = item;
+const EventItem: FC<EventItemProps> = ({ item, cityName, handleSignUpClickHandler }) => {
+    const { startDate, endDate, id } = item;
     return (
         <div className="box">
             <div className="box-item">
@@ -20,7 +22,10 @@ const EventItem: FC<EventItemProps> = ({ item, cityName }) => {
                     {item.isFree ? <Badge title="Free" /> : ""}
                     <span className="px-4 is-size-6 has-text-weight-bold">{item?.name} </span>
                 </p>
-                <Button title="Sign up" />
+                <Button
+                    title="Sign up"
+                    onClick={(e: FormEvent<HTMLAnchorElement>) => handleSignUpClickHandler(e, id)}
+                />
             </div>
             <div className="box-item mt-4">
                 <p>

@@ -63,12 +63,12 @@ const Filters: FC = () => {
         <div className="card mb-5">
             <div className="card-header">
                 <p className="card-header-title arrange-flex-lr">
-                    <p>
+                    <span>
                         <span className="icon">
                             <i className="fas fa-filter" />
                         </span>
                         Filter by
-                    </p>
+                    </span>
                     <Button title="Clear" onClick={clickClearHandler} />
                 </p>
             </div>
