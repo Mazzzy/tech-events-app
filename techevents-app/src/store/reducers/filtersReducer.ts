@@ -41,6 +41,7 @@ export const filtersReducer = (state = initialFilterState, action: FilterAction)
             return {
                 ...state,
                 text: action.defaultFilter.text,
+                city: action.defaultFilter.city,
                 free: action.defaultFilter.free,
                 dayPart: action.defaultFilter.dayPart,
             };

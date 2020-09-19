@@ -7,6 +7,7 @@ import {
     TechEventsData,
     APIError,
     SET_SELECTED_EVENT,
+    DELETE_SELECTED_EVENT,
 } from "../types";
 import { RootState } from "../store";
 import API from "../../config/API";
@@ -51,6 +52,13 @@ export const setError = (): TechEventAction => {
 export const setSelectedEvent = (id: string): TechEventAction => {
     return {
         type: SET_SELECTED_EVENT,
+        payload: id,
+    };
+};
+
+export const deleteSelectedEvent = (id: string): TechEventAction => {
+    return {
+        type: DELETE_SELECTED_EVENT,
         payload: id,
     };
 };
