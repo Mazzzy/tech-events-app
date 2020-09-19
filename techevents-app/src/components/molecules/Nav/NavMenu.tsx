@@ -1,5 +1,5 @@
 import React, { FC, MouseEvent } from "react";
-import NavItem from "../atoms/NavItem/NavItem";
+import NavItem from "../../atoms/NavItem/NavItem";
 interface NavMenuProps {
     activeTab?: string;
     setActiveTabClick: (e: MouseEvent<HTMLAnchorElement>, name: string) => void;

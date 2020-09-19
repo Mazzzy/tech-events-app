@@ -4,8 +4,8 @@ import { RootState } from "../../store/store";
 import { setTabActive } from "../../store/actions";
 
 import brandLogo from "../../trivago-logo.png";
-import NavBrand from "../molecules/NavBrand";
-import NavMenu from "../molecules/NavMenu";
+import NavBrand from "../molecules/Nav/NavBrand";
+import NavMenu from "../molecules/Nav/NavMenu";
 
 const Navbar: FC = () => {
     const dispatch = useDispatch();
