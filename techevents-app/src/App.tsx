@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { getTechEvents, setLoading } from "./store/actions/eventsAction";
+import { getTechEvents, setLoading } from "./store/actions";
 import Workspace from "./components/templates/Workspace";
 
 import "./App.css";

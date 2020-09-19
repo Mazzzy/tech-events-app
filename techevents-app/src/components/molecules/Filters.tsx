@@ -2,7 +2,7 @@ import React, { FC, useState, FormEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { RootState } from "../../store/store";
-import { filterText, filterCity, filterFree, filterPartsOfDay, filterClear } from "../../store/actions/filtersAction";
+import { filterText, filterCity, filterFree, filterPartsOfDay, filterClear } from "../../store/actions";
 import Badge from "../atoms/Badge";
 import Button from "../atoms/Button";
 

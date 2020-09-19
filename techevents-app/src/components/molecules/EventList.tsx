@@ -2,7 +2,7 @@ import React, { FC, useState, FormEvent } from "react";
 import { useDispatch } from "react-redux";
 
 import { TechEvent, TechEventsData, FilterState } from "../../store/types";
-import { setSelectedEvent, deleteSelectedEvent } from "../../store/actions/eventsAction";
+import { setSelectedEvent, deleteSelectedEvent } from "../../store/actions";
 import { getCityLabel, getVisibleEvents } from "../../utils/utils";
 
 import DateGroup from "../atoms/DateGroup";
