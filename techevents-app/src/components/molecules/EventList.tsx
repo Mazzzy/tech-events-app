@@ -5,7 +5,7 @@ import { TechEvent, TechEventsData, FilterState } from "../../store/types";
 import { setSelectedEvent, deleteSelectedEvent } from "../../store/actions";
 import { getCityLabel, getVisibleEvents } from "../../utils/utils";
 
-import DateGroup from "../atoms/DateGroup";
+import DateGroup from "../atoms/DateGroup/DateGroup";
 import EventItem from "./EventItem/EventItem";
 import Modal from "./Modal";
 

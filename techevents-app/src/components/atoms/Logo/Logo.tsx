@@ -1,12 +1,13 @@
 import React, { FC } from "react";
-import defaultLogo from "../../trivago-logo.png";
+import defaultLogo from "./default-logo.svg";
+import "./Logo.css";
 
 interface LogoProps {
     url?: string;
 }
 
 const Logo: FC<LogoProps> = ({ url }) => {
-    return <img src={url || defaultLogo} />;
+    return <img className="logo-img" src={url || defaultLogo} />;
 };
 
 export default Logo;

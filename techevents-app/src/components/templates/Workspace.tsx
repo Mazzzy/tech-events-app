@@ -6,7 +6,7 @@ import MainContent from "../organisms/MainContent";
 const Workspace: FC = () => {
     return (
         <div>
-            <Navbar title="Tech events app" />
+            <Navbar />
             <div className="columns px-5 mt-5">
                 <Sidebar />
                 <MainContent />

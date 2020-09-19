@@ -2,8 +2,8 @@ import React, { FC, FormEvent } from "react";
 import { TechEvent } from "../../../store/types";
 import { hoursFormat } from "../../../utils/utils";
 
-import Badge from "../../atoms/Badge";
-import Button from "../../atoms/Button";
+import Badge from "../../atoms/Badge/Badge";
+import Button from "../../atoms/Button/Button";
 
 import "./EventItem.css";
 
