@@ -1,5 +1,9 @@
-import React, { FC, FormEvent, useState } from "react";
+import React, { FC, FormEvent } from "react";
 import { CityDetails } from "../../../store/types";
+
+import TextField from "../../atoms/TextField/TextField";
+import Select from "../../atoms/Select/Select";
+import Checkbox from "../../atoms/Checkbox/Checkbox";
 import Badge from "../../atoms/Badge/Badge";
 
 interface FilterContentProps {
@@ -60,50 +64,36 @@ const FilterContent: FC<FilterContentProps> = ({
             <form>
                 <div className="field">
                     <div className="control">
-                        <input
-                            type="text"
-                            className="input"
-                            placeholder="Event Name"
+                        <TextField
                             name="eventName"
+                            placeholder="Event Name"
                             value={eventName}
                             onChange={nameInputChangeHandler}
                         />
                     </div>
                 </div>
-                <div className="field">
-                    <div className="control has-icons-left">
-                        <div className="select">
-                            <select name="cityId" onChange={citySelectChangeHandler} value={cityId}>
-                                <option value="0">City name</option>
-                                {cities.map((city) => (
-                                    <option key={city.id} value={city.id}>
-                                        {" "}
-                                        {city.name}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-                        <div className="icon is-small is-left">
-                            <i className="fas fa-globe" />
-                        </div>
-                    </div>
-                </div>
+                <Select
+                    name="cityId"
+                    value={cityId}
+                    defaultOption="City name"
+                    options={cities}
+                    onChange={citySelectChangeHandler}
+                />
                 <div className="field">
                     <label className="checkbox">
-                        <input type="checkbox" name="freeEvent" checked={freeEvent} onChange={onlyFreeChangeHandler} />{" "}
-                        Only <Badge title="Free" />
+                        <Checkbox name="freeEvent" checked={freeEvent} onChange={onlyFreeChangeHandler} /> Only{" "}
+                        <Badge title="Free" />
                     </label>
                 </div>
                 {partOfDaysArr.map((time) => (
                     <div key={time} className="field">
                         <label className="checkbox">
-                            <input
-                                type="checkbox"
+                            <Checkbox
                                 name={time}
                                 checked={dayPart.includes(time)}
                                 onChange={(e) => dayPartsChangeHandler(e, time)}
                             />
-                            {time}
+                            <span className="filter-label">{" " + time}</span>
                         </label>
                     </div>
                 ))}

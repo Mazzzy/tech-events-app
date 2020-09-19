@@ -6,12 +6,15 @@ import { filterText, filterCity, filterFree, filterPartsOfDay, filterClear } fro
 
 import FilterHead from "./FilterHead";
 import FilterContent from "./FilterContent";
+import "./Filters.css";
 
 const Filters: FC = () => {
     const dispatch = useDispatch();
+
     const techEventsData = useSelector((state: RootState) => state.techEvents?.data);
     const cities = techEventsData?.cities || [];
     const timeFilter = useSelector((state: RootState) => state.filters?.dayPart);
+
     const dayArr: string[] = [];
     const filterCompInitialState = {
         eventName: "",
@@ -45,6 +48,7 @@ const Filters: FC = () => {
     const clickClearHandler = (e: MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
         setFilterCompState({ ...filterCompInitialState });
+        // trigger to update store
         dispatch(filterClear());
     };
 
