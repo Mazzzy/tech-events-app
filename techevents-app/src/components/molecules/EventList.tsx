@@ -2,7 +2,7 @@ import React, { FC, useState, FormEvent } from "react";
 import { useDispatch } from "react-redux";
 
 import { TechEvent, TechEventsData, FilterState } from "../../store/types";
-import { setSelectedEvent } from "../../store/actions/eventsAction";
+import { setSelectedEvent, deleteSelectedEvent } from "../../store/actions/eventsAction";
 import { getCityLabel, getVisibleEvents } from "../../utils/utils";
 
 import DateGroup from "../atoms/DateGroup";
@@ -21,8 +21,12 @@ const EventList: FC<EventListProps> = ({ data, filters, activeTab }) => {
     const [eventIdToSignUp, setEventIdToSignUp] = useState("");
 
     const signUpClickHandler = (e: FormEvent<HTMLAnchorElement>, id: any) => {
-        if(activeTab !== "my") setShowConfirmModal(true);
-        setEventIdToSignUp(id);
+        if (activeTab !== "my") {
+            setShowConfirmModal(true);
+            setEventIdToSignUp(id);
+        } else {
+            dispatch(deleteSelectedEvent(id));
+        }
     };
 
     const { events, cities } = data;
