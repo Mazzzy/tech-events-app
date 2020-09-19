@@ -48,17 +48,20 @@ const getTime = (currentTime: any): string => {
 };
 
 // filter out matched criterias
-export const getVisibleEvents = (techEvents: TechEvent[], filters: FilterState) => {
+export const getVisibleEvents = (techEvents: TechEvent[], filters: FilterState, activeTab: string) => {
     const { text, city, free, dayPart } = filters;
+    const selectedEventsFromLS = getEventsFromLS();
     return techEvents
-        .sort((a: any, b: any) => moment(a.startDate).diff(b.startDate))
         .filter((techEvent) => {
             const textEventsMatch: boolean = techEvent.name.toLowerCase().includes(text.toLowerCase());
             const cityMatch: boolean = city ? city === techEvent.city : true;
             const freeEventsMatch: boolean = free ? techEvent.isFree : true;
-
             const dayPartMatch: boolean =
                 dayPart && dayPart.length > 0 ? dayPart.includes(getTime(moment(techEvent.startDate))) : true;
-            return textEventsMatch && cityMatch && freeEventsMatch && dayPartMatch;
-        });
+            const myEventsMatch: boolean =
+                activeTab === "my" ? Object.keys(selectedEventsFromLS).includes(String(techEvent.id)) : true;
+
+            return myEventsMatch && textEventsMatch && cityMatch && freeEventsMatch && dayPartMatch;
+        })
+        .sort((a: any, b: any) => moment(a.startDate).diff(b.startDate));
 };

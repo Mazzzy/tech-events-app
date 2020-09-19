@@ -12,9 +12,10 @@ import Modal from "./Modal";
 interface EventListProps {
     data: TechEventsData;
     filters: FilterState;
+    activeTab: string;
 }
 
-const EventList: FC<EventListProps> = ({ data, filters }) => {
+const EventList: FC<EventListProps> = ({ data, filters, activeTab }) => {
     const dispatch = useDispatch();
     const [showConfirmModal, setShowConfirmModal] = useState(false);
     const [eventIdToSignUp, setEventIdToSignUp] = useState("");
@@ -25,7 +26,7 @@ const EventList: FC<EventListProps> = ({ data, filters }) => {
     };
 
     const { events, cities } = data;
-    const visibleEvents = getVisibleEvents(events, filters);
+    const visibleEvents = getVisibleEvents(events, filters, activeTab);
     const eventsCollection = visibleEvents.map((aTechEvent: TechEvent, index: number) => [
         <DateGroup key={`${aTechEvent.startDate}-date`} event={aTechEvent} prevEvent={visibleEvents[index - 1]} />,
         <EventItem
@@ -47,7 +48,7 @@ const EventList: FC<EventListProps> = ({ data, filters }) => {
     };
     return (
         <section>
-            {events.length === 0 ? <p className="py-4 has-text-centered">No Events</p> : eventsCollection}
+            {eventsCollection.length === 0 ? <h3 className="is-size-4 py-2">No events available</h3> : eventsCollection}
             {showConfirmModal && (
                 <Modal title="Confirm to add event?" okClick={confirmSignUp} cancelClick={closeModal}>
                     Are you want to sign up for this event?
