@@ -10,11 +10,13 @@ import "./EventItem.css";
 interface EventItemProps {
     item: TechEvent;
     cityName: string;
+    activeTab: string;
     handleSignUpClickHandler: (e: FormEvent<HTMLAnchorElement>, id: number) => void;
 }
 
-const EventItem: FC<EventItemProps> = ({ item, cityName, handleSignUpClickHandler }) => {
+const EventItem: FC<EventItemProps> = ({ item, cityName, activeTab, handleSignUpClickHandler }) => {
     const { startDate, endDate, id } = item;
+    const btnTitle = activeTab === "my" ? "Cancel" : "Sign up";
     return (
         <div className="box">
             <div className="box-item">
@@ -23,7 +25,7 @@ const EventItem: FC<EventItemProps> = ({ item, cityName, handleSignUpClickHandle
                     <span className="px-4 is-size-6 has-text-weight-bold">{item?.name} </span>
                 </p>
                 <Button
-                    title="Sign up"
+                    title={btnTitle}
                     onClick={(e: FormEvent<HTMLAnchorElement>) => handleSignUpClickHandler(e, id)}
                 />
             </div>

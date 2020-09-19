@@ -21,7 +21,7 @@ const EventList: FC<EventListProps> = ({ data, filters, activeTab }) => {
     const [eventIdToSignUp, setEventIdToSignUp] = useState("");
 
     const signUpClickHandler = (e: FormEvent<HTMLAnchorElement>, id: any) => {
-        setShowConfirmModal(true);
+        if(activeTab !== "my") setShowConfirmModal(true);
         setEventIdToSignUp(id);
     };
 
@@ -33,6 +33,7 @@ const EventList: FC<EventListProps> = ({ data, filters, activeTab }) => {
             key={aTechEvent?.id}
             item={aTechEvent}
             cityName={getCityLabel(cities, aTechEvent.city)}
+            activeTab={activeTab}
             handleSignUpClickHandler={signUpClickHandler}
         />,
     ]);
