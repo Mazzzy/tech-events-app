@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/tech-events-app/static/css/main.5b0bdb2d.chunk.css",
-    "main.js": "/tech-events-app/static/js/main.4a7810ea.chunk.js",
-    "main.js.map": "/tech-events-app/static/js/main.4a7810ea.chunk.js.map",
+    "main.css": "/tech-events-app/static/css/main.4a03748b.chunk.css",
+    "main.js": "/tech-events-app/static/js/main.88fbca53.chunk.js",
+    "main.js.map": "/tech-events-app/static/js/main.88fbca53.chunk.js.map",
     "runtime-main.js": "/tech-events-app/static/js/runtime-main.55023b5b.js",
     "runtime-main.js.map": "/tech-events-app/static/js/runtime-main.55023b5b.js.map",
     "static/css/2.4555ca6d.chunk.css": "/tech-events-app/static/css/2.4555ca6d.chunk.css",
-    "static/js/2.4e560187.chunk.js": "/tech-events-app/static/js/2.4e560187.chunk.js",
-    "static/js/2.4e560187.chunk.js.map": "/tech-events-app/static/js/2.4e560187.chunk.js.map",
+    "static/js/2.ca8e3a51.chunk.js": "/tech-events-app/static/js/2.ca8e3a51.chunk.js",
+    "static/js/2.ca8e3a51.chunk.js.map": "/tech-events-app/static/js/2.ca8e3a51.chunk.js.map",
     "index.html": "/tech-events-app/index.html",
-    "precache-manifest.9925f1242b3e2a944b96bceaceacb97b.js": "/tech-events-app/precache-manifest.9925f1242b3e2a944b96bceaceacb97b.js",
+    "precache-manifest.fc52bcec38c43f0a2045c5221924231c.js": "/tech-events-app/precache-manifest.fc52bcec38c43f0a2045c5221924231c.js",
     "service-worker.js": "/tech-events-app/service-worker.js",
     "static/css/2.4555ca6d.chunk.css.map": "/tech-events-app/static/css/2.4555ca6d.chunk.css.map",
-    "static/css/main.5b0bdb2d.chunk.css.map": "/tech-events-app/static/css/main.5b0bdb2d.chunk.css.map",
-    "static/js/2.4e560187.chunk.js.LICENSE.txt": "/tech-events-app/static/js/2.4e560187.chunk.js.LICENSE.txt",
+    "static/css/main.4a03748b.chunk.css.map": "/tech-events-app/static/css/main.4a03748b.chunk.css.map",
+    "static/js/2.ca8e3a51.chunk.js.LICENSE.txt": "/tech-events-app/static/js/2.ca8e3a51.chunk.js.LICENSE.txt",
     "static/media/all.min.css": "/tech-events-app/static/media/fa-solid-900.ee09ad75.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.55023b5b.js",
     "static/css/2.4555ca6d.chunk.css",
-    "static/js/2.4e560187.chunk.js",
-    "static/css/main.5b0bdb2d.chunk.css",
-    "static/js/main.4a7810ea.chunk.js"
+    "static/js/2.ca8e3a51.chunk.js",
+    "static/css/main.4a03748b.chunk.css",
+    "static/js/main.88fbca53.chunk.js"
   ]
 }
