@@ -1,8 +1,8 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import { useDispatch } from "react-redux";
 
-import { getTechEvents, setLoading } from "./store/actions/eventsAction";
-import Workspace from "./components/templates/Workspace";
+import { getTechEvents, setLoading } from "./store/actions";
+import Dashboard from "./components/templates/Dashboard";
 
 import "./App.css";
 
@@ -13,7 +13,7 @@ const App: FC = () => {
 
     return (
         <div className="container is-size-7">
-            <Workspace />
+            <Dashboard />
         </div>
     );
 };

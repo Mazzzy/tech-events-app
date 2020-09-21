@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Filters from "../molecules/Filters";
+import Filters from "../molecules/Filter/Filters";
 
 const Sidebar: FC = () => {
     return (

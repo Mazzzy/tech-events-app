@@ -8,7 +8,7 @@ interface ButtonProps {
 
 const Button: FC<ButtonProps> = ({ title, onClick, dataVal }) => {
     return (
-        <a className="button is-small is-primary is-outlined" onClick={onClick} id={dataVal}>
+        <a role="button" className="button is-small is-primary is-outlined" onClick={onClick} id={dataVal} href="/#">
             {title || ""}
         </a>
     );
