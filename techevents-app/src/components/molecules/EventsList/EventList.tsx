@@ -1,13 +1,13 @@
 import React, { FC, useState, FormEvent } from "react";
 import { useDispatch } from "react-redux";
 
-import { TechEvent, TechEventsData, FilterState } from "../../store/types";
-import { setSelectedEvent, deleteSelectedEvent } from "../../store/actions";
-import { getCityLabel, getVisibleEvents } from "../../utils/utils";
+import { TechEvent, TechEventsData, FilterState } from "../../../store/types";
+import { setSelectedEvent, deleteSelectedEvent } from "../../../store/actions";
+import { getCityLabel, getVisibleEvents } from "../../../utils/utils";
 
-import DateGroup from "../atoms/DateGroup/DateGroup";
-import EventItem from "./EventItem/EventItem";
-import Modal from "./Modal";
+import DateGroup from "../../atoms/DateGroup/DateGroup";
+import EventItem from "./EventItem";
+import Modal from "../Modal";
 
 interface EventListProps {
     data: TechEventsData;
