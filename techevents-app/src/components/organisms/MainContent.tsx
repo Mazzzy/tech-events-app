@@ -10,7 +10,7 @@ const MainContent: FC = () => {
     const error = useSelector((state: RootState) => state.techEvents?.error);
     const filterData = useSelector((state: RootState) => state.filters);
     const activeTab = useSelector((state: RootState) => state.tabs?.activeName);
-    const selectedList = useSelector((state: RootState) => state.techEvents?.selectedEvent);
+    const selectedEvents = useSelector((state: RootState) => state.techEvents?.selectedEvent);
     return (
         <div className="column is-9">
             {loading ? (

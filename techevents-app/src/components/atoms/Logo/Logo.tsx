@@ -7,7 +7,7 @@ interface LogoProps {
 }
 
 const Logo: FC<LogoProps> = ({ url }) => {
-    return <img className="logo-img" src={url || defaultLogo} />;
+    return <img className="logo-img" src={url || defaultLogo} alt="logo-img" />;
 };
 
 export default Logo;

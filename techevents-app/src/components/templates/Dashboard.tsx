@@ -3,7 +3,7 @@ import Navbar from "../organisms/Navbar";
 import Sidebar from "../organisms/Sidebar";
 import MainContent from "../organisms/MainContent";
 
-const Workspace: FC = () => {
+const Dashboard: FC = () => {
     return (
         <div>
             <Navbar />
@@ -15,4 +15,4 @@ const Workspace: FC = () => {
     );
 };
 
-export default Workspace;
+export default Dashboard;
