@@ -3,10 +3,10 @@ import Navbar from "../organisms/Navbar";
 import Sidebar from "../organisms/Sidebar";
 import MainContent from "../organisms/MainContent";
 
-const Workspace: FC = () => {
+const Dashboard: FC = () => {
     return (
         <div>
-            <Navbar title="Tech events app" />
+            <Navbar />
             <div className="columns px-5 mt-5">
                 <Sidebar />
                 <MainContent />
@@ -15,4 +15,4 @@ const Workspace: FC = () => {
     );
 };
 
-export default Workspace;
+export default Dashboard;

@@ -2,8 +2,10 @@ import React, { FC, FormEvent } from "react";
 import { TechEvent } from "../../../store/types";
 import { hoursFormat } from "../../../utils/utils";
 
-import Badge from "../../atoms/Badge";
-import Button from "../../atoms/Button";
+import Badge from "../../atoms/Badge/Badge";
+import Button from "../../atoms/Button/Button";
+import Icon from "../../atoms/Icon/Icon";
+import Label from "../../atoms/Label/Label";
 
 import "./EventItem.css";
 
@@ -22,7 +24,7 @@ const EventItem: FC<EventItemProps> = ({ item, cityName, activeTab, handleSignUp
             <div className="box-item">
                 <p>
                     {item.isFree ? <Badge title="Free" /> : ""}
-                    <span className="px-4 is-size-6 has-text-weight-bold">{item?.name} </span>
+                    <Label className="px-4 is-size-6 has-text-weight-bold">{item?.name}</Label>
                 </p>
                 <Button
                     title={btnTitle}
@@ -31,23 +33,17 @@ const EventItem: FC<EventItemProps> = ({ item, cityName, activeTab, handleSignUp
             </div>
             <div className="box-item mt-4">
                 <p>
-                    <span className="icon">
-                        <i className="fas fa-map-marker" />
-                    </span>
-                    <span>{cityName}</span>
+                    <Icon className="fa-map-marker" />
+                    <Label>{cityName}</Label>
                 </p>
                 <p>
-                    <span className="icon">
-                        <i className="fas fa-thermometer-half" />
-                    </span>
-                    Temp
+                    <Icon className="fa-thermometer-half" />
+                    <Label>Temp</Label>
                 </p>
                 <p>
-                    <span className="icon">
-                        <i className="fa fa-clock" aria-hidden="true" />
-                    </span>
-                    <span>from: {startDate ? hoursFormat(new Date(startDate)) : ""} </span>
-                    <span>to: {endDate ? hoursFormat(new Date(endDate)) : ""}</span>
+                    <Icon className="fa-clock" />
+                    <Label>from: {startDate ? hoursFormat(new Date(startDate)) : ""} </Label>
+                    <Label>to: {endDate ? hoursFormat(new Date(endDate)) : ""}</Label>
                 </p>
             </div>
         </div>

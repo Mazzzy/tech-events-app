@@ -20,10 +20,10 @@ const Modal: FC<ModalProps> = ({ title, children, okClick, cancelClick }) => {
                     <div className="content">{children}</div>
                 </section>
                 <footer className="modal-card-foot">
-                    <a className="button is-success" onClick={okClick}>
+                    <a className="button is-success" onClick={okClick} href="/#">
                         Yes
                     </a>
-                    <a className="button" onClick={cancelClick}>
+                    <a className="button" onClick={cancelClick} href="/#">
                         Cancel
                     </a>
                 </footer>
