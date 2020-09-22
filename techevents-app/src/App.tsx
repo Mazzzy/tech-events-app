@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 
 import { getTechEvents, setLoading } from "./store/actions";
 import Dashboard from "./components/templates/Dashboard";
-
 import "./App.css";
 
 const App: FC = () => {
@@ -12,7 +11,7 @@ const App: FC = () => {
     dispatch(getTechEvents());
 
     return (
-        <div className="container is-size-7">
+        <div className="container">
             <Dashboard />
         </div>
     );

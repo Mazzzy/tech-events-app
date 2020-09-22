@@ -53,7 +53,7 @@ const Filters: FC = () => {
     };
 
     return (
-        <div className="card mb-5">
+        <div className="card">
             <FilterHead title="Filter by" clickClearHandler={clickClearHandler} />
             <FilterContent
                 cities={cities}

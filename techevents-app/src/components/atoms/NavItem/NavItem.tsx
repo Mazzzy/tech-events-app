@@ -9,7 +9,7 @@ interface NavItemProps {
 
 const NavItem: FC<NavItemProps> = ({ href, children, className, clickHandler }) => {
     return (
-        <a className={`navbar-item ${className}`} href={href || "#"} onClick={clickHandler}>
+        <a className={`navbar-item ${className || ""}`} href={href || "#"} onClick={clickHandler}>
             {children}
         </a>
     );

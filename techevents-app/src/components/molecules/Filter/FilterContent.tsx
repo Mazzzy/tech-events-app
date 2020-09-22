@@ -63,23 +63,23 @@ const FilterContent: FC<FilterContentProps> = ({
         <div className="card-content">
             <form>
                 <div className="field">
-                    <div className="control">
-                        <TextField
-                            name="eventName"
-                            placeholder="Event Name"
-                            value={eventName}
-                            onChange={nameInputChangeHandler}
-                        />
-                    </div>
+                    <TextField
+                        name="eventName"
+                        placeholder="Event Name"
+                        value={eventName}
+                        onChange={nameInputChangeHandler}
+                    />
                 </div>
-                <Select
-                    name="cityId"
-                    value={cityId}
-                    defaultOption="City name"
-                    options={cities}
-                    onChange={citySelectChangeHandler}
-                />
                 <div className="field">
+                    <Select
+                        name="cityId"
+                        value={cityId}
+                        defaultOption="City name"
+                        options={cities}
+                        onChange={citySelectChangeHandler}
+                    />
+                </div>
+                <div className="field free-check-container">
                     <label className="checkbox">
                         <Checkbox name="freeEvent" checked={freeEvent} onChange={onlyFreeChangeHandler} /> Only{" "}
                         <Badge title="Free" />

@@ -1,5 +1,5 @@
 import React, { FC, FormEvent } from "react";
-
+import "./TextField.css";
 interface TextFieldProps {
     name?: string;
     value?: string;
@@ -12,7 +12,7 @@ const TextField: FC<TextFieldProps> = ({ name, value, className, placeholder, on
     return (
         <input
             type="text"
-            className={`input ${className}`}
+            className={`input ${className || ""}`}
             placeholder={placeholder || ""}
             name={name}
             value={value}

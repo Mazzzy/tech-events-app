@@ -1,4 +1,5 @@
 import React, { FC, MouseEvent } from "react";
+import Icon from "../../atoms/Icon/Icon";
 import Button from "../../atoms/Button/Button";
 
 interface FilterHeadProps {
@@ -9,11 +10,9 @@ interface FilterHeadProps {
 const FilterHead: FC<FilterHeadProps> = ({ title, clickClearHandler }) => {
     return (
         <div className="card-header">
-            <p className="card-header-title arrange-flex-lr">
+            <p className="card-header-title">
                 <span>
-                    <span className="icon">
-                        <i className="fas fa-filter" />
-                    </span>
+                    <Icon className="fa-filter" />
                     {title}
                 </span>
                 <Button title="Clear" onClick={clickClearHandler} />

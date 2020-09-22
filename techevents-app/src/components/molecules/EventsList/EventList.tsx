@@ -7,8 +7,8 @@ import { getCityLabel, getVisibleEvents } from "../../../utils/utils";
 
 import DateGroup from "../../atoms/DateGroup/DateGroup";
 import EventItem from "./EventItem";
-import Modal from "../Modal";
-
+import Modal from "../Modal/Modal";
+import HeadingText from "../HeadingText";
 interface EventListProps {
     data: TechEventsData;
     filters: FilterState;
@@ -53,9 +53,9 @@ const EventList: FC<EventListProps> = ({ data, filters, activeTab }) => {
     };
     return (
         <section>
-            {eventsCollection.length === 0 ? <h3 className="is-size-4 py-2">No events available</h3> : eventsCollection}
+            {eventsCollection.length === 0 ? <HeadingText title="No events available" /> : eventsCollection}
             {showConfirmModal && (
-                <Modal title="Confirm to add event?" okClick={confirmSignUp} cancelClick={closeModal}>
+                <Modal title="Confirm to SignUp" okClick={confirmSignUp} cancelClick={closeModal}>
                     Are you want to sign up for this event?
                 </Modal>
             )}
