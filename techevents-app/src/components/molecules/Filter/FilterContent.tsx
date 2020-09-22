@@ -79,7 +79,7 @@ const FilterContent: FC<FilterContentProps> = ({
                         onChange={citySelectChangeHandler}
                     />
                 </div>
-                <div className="field">
+                <div className="field free-check-container">
                     <label className="checkbox">
                         <Checkbox name="freeEvent" checked={freeEvent} onChange={onlyFreeChangeHandler} /> Only{" "}
                         <Badge title="Free" />
