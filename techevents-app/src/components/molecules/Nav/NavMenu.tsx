@@ -10,13 +10,13 @@ const NavMenu: FC<NavMenuProps> = ({ activeTab, setActiveTabClick }) => {
         <div className="navbar-menu">
             <div className="navbar-end">
                 <NavItem
-                    className={`${activeTab === "all" ? "is-active is-tab" : ""}`}
+                    className={`${activeTab === "all" ? "is-active" : ""}`}
                     clickHandler={(e: MouseEvent<HTMLAnchorElement>) => setActiveTabClick(e, "all")}
                 >
                     All events
                 </NavItem>
                 <NavItem
-                    className={`${activeTab === "my" ? "is-active is-tab" : ""}`}
+                    className={`${activeTab === "my" ? "is-active" : ""}`}
                     clickHandler={(e: MouseEvent<HTMLAnchorElement>) => setActiveTabClick(e, "my")}
                 >
                     My events

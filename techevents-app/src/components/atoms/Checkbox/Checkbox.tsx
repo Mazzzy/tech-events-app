@@ -11,7 +11,7 @@ const Checkbox: FC<CheckboxProps> = ({ name, checked, className, onChange }) => 
     return (
         <input
             type="checkbox"
-            className={`checkbox ${className || ""}`}
+            className={`${className || ""}`}
             name={name}
             checked={checked}
             onChange={onChange}

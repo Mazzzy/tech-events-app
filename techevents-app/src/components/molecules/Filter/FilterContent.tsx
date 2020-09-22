@@ -70,13 +70,15 @@ const FilterContent: FC<FilterContentProps> = ({
                         onChange={nameInputChangeHandler}
                     />
                 </div>
-                <Select
-                    name="cityId"
-                    value={cityId}
-                    defaultOption="City name"
-                    options={cities}
-                    onChange={citySelectChangeHandler}
-                />
+                <div className="field">
+                    <Select
+                        name="cityId"
+                        value={cityId}
+                        defaultOption="City name"
+                        options={cities}
+                        onChange={citySelectChangeHandler}
+                    />
+                </div>
                 <div className="field">
                     <label className="checkbox">
                         <Checkbox name="freeEvent" checked={freeEvent} onChange={onlyFreeChangeHandler} /> Only{" "}
