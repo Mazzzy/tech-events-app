@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import "./Modal.css";
 
 interface ModalProps {
     title?: string;
@@ -9,18 +10,18 @@ interface ModalProps {
 
 const Modal: FC<ModalProps> = ({ title, children, okClick, cancelClick }) => {
     return (
-        <div className="modal is-active">
+        <div className="modal">
             <div className="modal-background" onClick={cancelClick} />
-            <div className="modal-card">
+            <div className="modal-content">
                 <header className="modal-card-head">
                     <p className="modal-card-title">{title}</p>
-                    <button className="delete" onClick={cancelClick} />
+                    <button type="button" className="delete" onClick={cancelClick} />
                 </header>
                 <section className="modal-card-body">
                     <div className="content">{children}</div>
                 </section>
                 <footer className="modal-card-foot">
-                    <a className="button is-success" onClick={okClick} href="/#">
+                    <a className="button" onClick={okClick} href="/#">
                         Yes
                     </a>
                     <a className="button" onClick={cancelClick} href="/#">

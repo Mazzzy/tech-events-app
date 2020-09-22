@@ -3,7 +3,7 @@ import Heading from "../atoms/Heading/Heading";
 
 interface HeadingTextProps {
     title?: string;
-    className?:string;
+    className?: string;
 }
 
 const HeadingText: FC<HeadingTextProps> = ({ title, className }) => {
