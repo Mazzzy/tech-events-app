@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 
 import { getTechEvents, setLoading } from "./store/actions";
 import Dashboard from "./components/templates/Dashboard";
-
 import "./App.css";
 
 const App: FC = () => {

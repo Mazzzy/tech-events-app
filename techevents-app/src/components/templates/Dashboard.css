@@ -7,20 +7,14 @@
 
 .dashboard-contents .side-bar {
     font-size: 1rem;
-    /* display: block;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1; */
+    display: block;
     padding: .75rem;
-    /* flex: none;*/
-    width: 22%; 
+    flex: none;
+    flex: 1 1 0;
 }
 .dashboard-contents .main-contents {
-    /* display: block;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1; */
+    display: block;
     padding: .75rem;
-    /* flex: none;*/
-    width: 78%; 
+    flex: none;
+    flex: 2 2 20em;
 }

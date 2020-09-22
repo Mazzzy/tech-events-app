@@ -21,7 +21,6 @@ const NavMenu: FC<NavMenuProps> = ({ activeTab, setActiveTabClick }) => {
                 >
                     My events
                 </NavItem>
-                <NavItem>About</NavItem>
             </div>
         </div>
     );

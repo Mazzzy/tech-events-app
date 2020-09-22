@@ -3,6 +3,7 @@ import Navbar from "../organisms/Navbar";
 import Sidebar from "../organisms/Sidebar";
 import MainContent from "../organisms/MainContent";
 import "./Dashboard.css";
+import "./MediaQueries.css";
 
 const Dashboard: FC = () => {
     return (
