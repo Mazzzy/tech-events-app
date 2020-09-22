@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/tech-events-app/static/css/main.a114c655.chunk.css",
-    "main.js": "/tech-events-app/static/js/main.0e2af0d1.chunk.js",
-    "main.js.map": "/tech-events-app/static/js/main.0e2af0d1.chunk.js.map",
+    "main.css": "/tech-events-app/static/css/main.61228fd8.chunk.css",
+    "main.js": "/tech-events-app/static/js/main.51c6c174.chunk.js",
+    "main.js.map": "/tech-events-app/static/js/main.51c6c174.chunk.js.map",
     "runtime-main.js": "/tech-events-app/static/js/runtime-main.55023b5b.js",
     "runtime-main.js.map": "/tech-events-app/static/js/runtime-main.55023b5b.js.map",
-    "static/css/2.4555ca6d.chunk.css": "/tech-events-app/static/css/2.4555ca6d.chunk.css",
-    "static/js/2.0e7ef886.chunk.js": "/tech-events-app/static/js/2.0e7ef886.chunk.js",
-    "static/js/2.0e7ef886.chunk.js.map": "/tech-events-app/static/js/2.0e7ef886.chunk.js.map",
+    "static/css/2.ce586ded.chunk.css": "/tech-events-app/static/css/2.ce586ded.chunk.css",
+    "static/js/2.91cc197f.chunk.js": "/tech-events-app/static/js/2.91cc197f.chunk.js",
+    "static/js/2.91cc197f.chunk.js.map": "/tech-events-app/static/js/2.91cc197f.chunk.js.map",
     "index.html": "/tech-events-app/index.html",
-    "precache-manifest.ac57b6afaaff1d3e51f0569365d6a6c1.js": "/tech-events-app/precache-manifest.ac57b6afaaff1d3e51f0569365d6a6c1.js",
+    "precache-manifest.2a2e6d69281e158f476e31cd77a0c856.js": "/tech-events-app/precache-manifest.2a2e6d69281e158f476e31cd77a0c856.js",
     "service-worker.js": "/tech-events-app/service-worker.js",
-    "static/css/2.4555ca6d.chunk.css.map": "/tech-events-app/static/css/2.4555ca6d.chunk.css.map",
-    "static/css/main.a114c655.chunk.css.map": "/tech-events-app/static/css/main.a114c655.chunk.css.map",
-    "static/js/2.0e7ef886.chunk.js.LICENSE.txt": "/tech-events-app/static/js/2.0e7ef886.chunk.js.LICENSE.txt",
+    "static/css/2.ce586ded.chunk.css.map": "/tech-events-app/static/css/2.ce586ded.chunk.css.map",
+    "static/css/main.61228fd8.chunk.css.map": "/tech-events-app/static/css/main.61228fd8.chunk.css.map",
+    "static/js/2.91cc197f.chunk.js.LICENSE.txt": "/tech-events-app/static/js/2.91cc197f.chunk.js.LICENSE.txt",
     "static/media/default-logo.svg": "/tech-events-app/static/media/default-logo.5d5d9eef.svg",
     "static/media/all.min.css": "/tech-events-app/static/media/fa-solid-900.ee09ad75.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.55023b5b.js",
-    "static/css/2.4555ca6d.chunk.css",
-    "static/js/2.0e7ef886.chunk.js",
-    "static/css/main.a114c655.chunk.css",
-    "static/js/main.0e2af0d1.chunk.js"
+    "static/css/2.ce586ded.chunk.css",
+    "static/js/2.91cc197f.chunk.js",
+    "static/css/main.61228fd8.chunk.css",
+    "static/js/main.51c6c174.chunk.js"
   ]
 }
