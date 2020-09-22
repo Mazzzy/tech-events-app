@@ -3,7 +3,7 @@ import Filters from "../molecules/Filter/Filters";
 
 const Sidebar: FC = () => {
     return (
-        <div className="column is-3 is-size-6">
+        <div className="side-bar">
             <Filters />
         </div>
     );

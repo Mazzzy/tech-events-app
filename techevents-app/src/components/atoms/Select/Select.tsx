@@ -1,5 +1,6 @@
 import React, { FC, FormEvent } from "react";
-
+import Icon from "../Icon/Icon";
+import "./Select.css";
 interface DefaultOptionType {
     id: string;
     name: string;
@@ -16,9 +17,9 @@ interface SelectProps {
 const Select: FC<SelectProps> = ({ name, value, className, defaultOption, options, onChange }) => {
     return (
         <div className="field">
-            <div className="control has-icons-left">
+            <div className="has-icons-left">
                 <div className="select">
-                    <select className={`${className}`} name={name} onChange={onChange} value={value}>
+                    <select className={`${className || ""}`} name={name} onChange={onChange} value={value}>
                         <option value="0">{defaultOption}</option>
                         {options.map((item: DefaultOptionType) => (
                             <option key={item.id} value={item.id}>
@@ -28,9 +29,7 @@ const Select: FC<SelectProps> = ({ name, value, className, defaultOption, option
                         ))}
                     </select>
                 </div>
-                <div className="icon is-small is-left">
-                    <i className="fas fa-globe" />
-                </div>
+                <Icon placeIconClass="is-left" className="fa-globe" />
             </div>
         </div>
     );

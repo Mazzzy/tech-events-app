@@ -12,7 +12,7 @@ const App: FC = () => {
     dispatch(getTechEvents());
 
     return (
-        <div className="container is-size-7">
+        <div className="container">
             <Dashboard />
         </div>
     );

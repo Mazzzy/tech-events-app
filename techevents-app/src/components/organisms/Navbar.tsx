@@ -7,6 +7,8 @@ import brandLogo from "../../trivago-logo.png";
 import NavBrand from "../molecules/Nav/NavBrand";
 import NavMenu from "../molecules/Nav/NavMenu";
 
+import "./Navbar.css";
+
 const Navbar: FC = () => {
     const dispatch = useDispatch();
     const activeTab = useSelector((state: RootState) => state.tabs?.activeName);

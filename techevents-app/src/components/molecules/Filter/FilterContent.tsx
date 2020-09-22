@@ -63,14 +63,12 @@ const FilterContent: FC<FilterContentProps> = ({
         <div className="card-content">
             <form>
                 <div className="field">
-                    <div className="control">
-                        <TextField
-                            name="eventName"
-                            placeholder="Event Name"
-                            value={eventName}
-                            onChange={nameInputChangeHandler}
-                        />
-                    </div>
+                    <TextField
+                        name="eventName"
+                        placeholder="Event Name"
+                        value={eventName}
+                        onChange={nameInputChangeHandler}
+                    />
                 </div>
                 <Select
                     name="cityId"
