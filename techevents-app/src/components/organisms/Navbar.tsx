@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store/store";
 import { setTabActive } from "../../store/actions";
 
-import brandLogo from "../../trivago-logo.png";
+import brandLogo from "../../assets/imgs/trivago-logo.png";
 import NavBrand from "../molecules/Nav/NavBrand";
 import NavMenu from "../molecules/Nav/NavMenu";
 
