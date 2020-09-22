@@ -24,14 +24,14 @@ const EventItem: FC<EventItemProps> = ({ item, cityName, activeTab, handleSignUp
             <div className="box-item">
                 <p>
                     {item.isFree ? <Badge title="Free" /> : ""}
-                    <Label className="px-4 is-size-6 has-text-weight-bold">{item?.name}</Label>
+                    <Label className="box-item-head">{item?.name}</Label>
                 </p>
                 <Button
                     title={btnTitle}
                     onClick={(e: FormEvent<HTMLAnchorElement>) => handleSignUpClickHandler(e, id)}
                 />
             </div>
-            <div className="box-item mt-4">
+            <div className="box-item">
                 <p>
                     <Icon className="fa-map-marker" />
                     <Label>{cityName}</Label>

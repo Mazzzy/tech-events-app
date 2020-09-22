@@ -1,14 +1,15 @@
 import React, { FC, MouseEvent } from "react";
-
+import "./Button.css";
 interface ButtonProps {
     title?: string;
     dataVal?: string;
+    className?: string;
     onClick?: MouseEvent<HTMLAnchorElement> | any;
 }
 
-const Button: FC<ButtonProps> = ({ title, onClick, dataVal }) => {
+const Button: FC<ButtonProps> = ({ title, onClick, dataVal, className }) => {
     return (
-        <a role="button" className="button is-small is-primary is-outlined" onClick={onClick} id={dataVal} href="/#">
+        <a role="button" className={`button ${className || ""}`} onClick={onClick} id={dataVal} href="/#">
             {title || ""}
         </a>
     );

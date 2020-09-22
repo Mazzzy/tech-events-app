@@ -1,0 +1,148 @@
+/* 
+    ## Device = Desktops
+    ## Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  /* css */
+}
+  
+/* 
+    ## Device = Laptops, Desktops
+    ## Screen = B/w 1025px to 1280px
+*/
+  
+@media (min-width: 1025px) and (max-width: 1280px) {
+    /* css */
+}
+  
+/* 
+    ## Device = Tablets, Ipads (portrait)
+    ## Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .dashboard-contents {
+        flex-direction: column;
+    }
+}
+  
+/* 
+    ## Device = Tablets, Ipads (landscape)
+    ## Screen = B/w 768px to 1024px
+*/
+  
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    .dashboard-contents {
+        flex-direction: row;
+   }
+
+   .dashboard-contents .side-bar {
+    flex: 1 1 6em;
+    }
+}
+  
+/* 
+    ## Device = Low Resolution Tablets, Mobiles (Landscape)
+    ## Screen = B/w 481px to 767px
+*/
+  
+@media (min-width: 481px) and (max-width: 767px) {
+    .navbar .navbar-brand {
+        padding: 0;
+    }
+    
+    .dashboard-contents {
+        flex-direction: column;
+   }
+
+   .dashboard-contents .main-contents .box-item{
+        position: relative;
+        flex-direction: column;
+    }
+
+    .dashboard-contents .main-contents .box-item .badge {
+        position: absolute;
+        left: -3.25em;
+        top: -0.85em;
+    }
+
+    .dashboard-contents .main-contents .box-item .box-item-head {
+        padding: 0;
+    }
+
+    .dashboard-contents .main-contents .box-item .button {
+        position: absolute;
+        bottom: -7.5em;
+        right: 0;
+        z-index: 20;
+    }
+
+    .dashboard-contents .main-contents .box-item:last-child p{
+        margin: 0.45em 0;
+    }
+    
+    .dashboard-contents .main-contents .box-item:last-child p{
+        margin: 0.45em 0;
+    }
+
+    .modal .modal-content {
+        width: 70%
+    }
+}
+  
+/* 
+    ## Device = Most of the Smartphones Mobiles (Portrait)
+    ## Screen = B/w 320px to 479px
+*/
+  
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .navbar .navbar-brand {
+        padding: 0;
+    }
+
+    .dashboard-contents {
+        flex-direction: column;
+   }
+
+   .dashboard-contents .main-contents .box-item{
+        position: relative;
+        flex-direction: column;
+    }
+    
+    .dashboard-contents .main-contents .box-item .badge {
+        position: absolute;
+        left: -3.25em;
+        top: -0.85em;
+    }
+
+    .dashboard-contents .main-contents .box-item .box-item-head {
+        padding: 0;
+    }
+
+    .dashboard-contents .main-contents .box-item .button {
+        position: absolute;
+        bottom: -7.5em;
+        right: 0;
+        z-index: 20;
+    }
+
+    .dashboard-contents .main-contents .box-item:last-child p{
+        margin: 0.45em 0;
+    }
+
+    .dashboard-contents .main-contents .box-item:last-child p:last-child{
+        z-index: 10;
+    }
+
+    .modal .modal-content {
+        width: 100%
+    }
+
+    .select select {
+        width: 100%;
+    }
+}

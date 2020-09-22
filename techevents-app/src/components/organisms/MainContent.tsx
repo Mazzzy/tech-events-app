@@ -12,7 +12,7 @@ const MainContent: FC = () => {
     const activeTab = useSelector((state: RootState) => state.tabs?.activeName);
     const selectedEvents = useSelector((state: RootState) => state.techEvents?.selectedEvent);
     return (
-        <div className="column is-9">
+        <div className="main-contents">
             {loading ? (
                 <HeadingText title="Loading events..." />
             ) : (

@@ -3,10 +3,11 @@ import Heading from "../atoms/Heading/Heading";
 
 interface HeadingTextProps {
     title?: string;
+    className?: string;
 }
 
-const HeadingText: FC<HeadingTextProps> = ({ title }) => {
-    return <Heading className="is-size-4 py-2" title={title} />;
+const HeadingText: FC<HeadingTextProps> = ({ title, className }) => {
+    return <Heading className={`${className || ""}`} title={title} />;
 };
 
 export default HeadingText;
