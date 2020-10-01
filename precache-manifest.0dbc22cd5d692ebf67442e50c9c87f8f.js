@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e72232d5718b417c2b6cf1354386bde3",
+    "revision": "79511e3a2494119ac7a47ea07490bf5d",
     "url": "/tech-events-app/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tech-events-app/static/css/2.ce586ded.chunk.css"
   },
   {
-    "revision": "cd07cb72a0597bf7c642",
+    "revision": "6475c6b53a931f36e31a",
     "url": "/tech-events-app/static/css/main.61228fd8.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tech-events-app/static/js/2.91cc197f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cd07cb72a0597bf7c642",
-    "url": "/tech-events-app/static/js/main.d4f94e0a.chunk.js"
+    "revision": "6475c6b53a931f36e31a",
+    "url": "/tech-events-app/static/js/main.74896642.chunk.js"
   },
   {
     "revision": "7885885180d8d3b23723",
