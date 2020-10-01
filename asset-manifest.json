@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tech-events-app/static/css/main.61228fd8.chunk.css",
-    "main.js": "/tech-events-app/static/js/main.74896642.chunk.js",
-    "main.js.map": "/tech-events-app/static/js/main.74896642.chunk.js.map",
+    "main.js": "/tech-events-app/static/js/main.d4b1e040.chunk.js",
+    "main.js.map": "/tech-events-app/static/js/main.d4b1e040.chunk.js.map",
     "runtime-main.js": "/tech-events-app/static/js/runtime-main.55023b5b.js",
     "runtime-main.js.map": "/tech-events-app/static/js/runtime-main.55023b5b.js.map",
     "static/css/2.ce586ded.chunk.css": "/tech-events-app/static/css/2.ce586ded.chunk.css",
     "static/js/2.91cc197f.chunk.js": "/tech-events-app/static/js/2.91cc197f.chunk.js",
     "static/js/2.91cc197f.chunk.js.map": "/tech-events-app/static/js/2.91cc197f.chunk.js.map",
     "index.html": "/tech-events-app/index.html",
-    "precache-manifest.0dbc22cd5d692ebf67442e50c9c87f8f.js": "/tech-events-app/precache-manifest.0dbc22cd5d692ebf67442e50c9c87f8f.js",
+    "precache-manifest.0823c4e9978c50a08c5e9a892f6b7a8c.js": "/tech-events-app/precache-manifest.0823c4e9978c50a08c5e9a892f6b7a8c.js",
     "service-worker.js": "/tech-events-app/service-worker.js",
     "static/css/2.ce586ded.chunk.css.map": "/tech-events-app/static/css/2.ce586ded.chunk.css.map",
     "static/css/main.61228fd8.chunk.css.map": "/tech-events-app/static/css/main.61228fd8.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.ce586ded.chunk.css",
     "static/js/2.91cc197f.chunk.js",
     "static/css/main.61228fd8.chunk.css",
-    "static/js/main.74896642.chunk.js"
+    "static/js/main.d4b1e040.chunk.js"
   ]
 }
