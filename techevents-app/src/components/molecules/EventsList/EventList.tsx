@@ -64,3 +64,5 @@ const EventList: FC<EventListProps> = ({ data, filters, activeTab }) => {
 };
 
 export default EventList;
+
+// HeadingText should be atom

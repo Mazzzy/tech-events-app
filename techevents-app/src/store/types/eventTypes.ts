@@ -59,6 +59,8 @@ interface DeleteSelectedEventAction {
     type: typeof DELETE_SELECTED_EVENT;
     payload: string;
 }
+
+// type alias
 export type TechEventAction =
     | GetTechEventAction
     | SetLoadingAction

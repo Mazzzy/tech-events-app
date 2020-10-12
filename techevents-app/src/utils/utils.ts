@@ -53,7 +53,7 @@ export const getVisibleEvents = (techEvents: TechEvent[], filters: FilterState, 
     const selectedEventsFromLS = getEventsFromLS();
     return techEvents
         .filter((techEvent) => {
-            const textEventsMatch: boolean = techEvent.name.toLowerCase().includes(text.toLowerCase());
+            const textEventsMatch: boolean = text ? techEvent.name.toLowerCase().includes(text.toLowerCase()) : true;
             const cityMatch: boolean = city ? city === techEvent.city : true;
             const freeEventsMatch: boolean = free ? techEvent.isFree : true;
             const dayPartMatch: boolean =

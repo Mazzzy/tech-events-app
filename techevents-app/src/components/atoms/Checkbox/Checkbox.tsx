@@ -4,7 +4,7 @@ interface CheckboxProps {
     name?: string;
     checked?: boolean;
     className?: string;
-    onChange?: (e: FormEvent<HTMLInputElement>) => void;
+    onChange?: (e: FormEvent<HTMLInputElement>) => void; // function type
 }
 
 const Checkbox: FC<CheckboxProps> = ({ name, checked, className, onChange }) => {
